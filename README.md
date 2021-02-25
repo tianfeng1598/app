@@ -51,3 +51,25 @@ $ npm run dev
 * Traditional Chinese translation of this app is available at [`CalvertYang/electron-api-demos-zh-Hant`](https://github.com/CalvertYang/electron-api-demos-zh-Hant).
 
 Note: these versions are maintained by outside contributors and may not always be in sync with this version.
+
+## 开始
+计划通过对原有demo的处理，整理成为一个易用的模板，用于后续PC端的简易开发。
+
+## 资源分类
+首先明确一下文件夹的资源分类
+- assets 
+静态资源文件夹
+- main-process 
+主进程的文件夹
+- rederer-process
+渲染进程的文件夹
+- script
+脚本文件夹
+- sections
+模组文件夹
+- test
+测试用文件夹
+- out
+打包输出文件夹
+- node_modules
+node 模组依赖文件夹 
