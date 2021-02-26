@@ -33,66 +33,68 @@
   <nav class="nav js-nav">
     <header class="nav-header">
       <h1 class="nav-title">Electron <strong>API Demos</strong></h1>
+      <h1 class="nav-title">Electron API 示例</h1>
       <svg class="nav-header-icon"><use xlink:href="assets/img/icons.svg#icon-electron"></use></svg>
     </header>
 
     <div class="nav-item u-category-windows">
       <h5 class="nav-category">
         <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-windows"></use></svg>
-        Windows
+        Windows 窗口
       </h5>
-      <button type="button" id="button-windows" data-section="windows" class="nav-button">Create and manage <em>windows</em></button>
-      <button type="button" id="button-crash-hang" data-section="crash-hang" class="nav-button">Handling window <em>crashes and hangs</em></button>
+      <button type="button" id="button-windows" data-section="windows" class="nav-button">Create and manage <em>windows</em> 创建和管理窗口</button>
+      <button type="button" id="button-crash-hang" data-section="crash-hang" class="nav-button">Handling window <em>crashes and hangs</em> 处理窗口的崩溃和挂起</button>
     </div>
 
     <div class="nav-item u-category-menu">
       <h5 class="nav-category">
         <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-menu"></use></svg>
-        Menus
+        Menus 菜单
       </h5>
-      <button type="button" id="button-menus" data-section="menus" class="nav-button">Customize <em>menus</em> </button>
-      <button type="button" id="button-shortcuts" data-section="shortcuts" class="nav-button">Register keyboard <em>shortcuts</em></button>
+      <button type="button" id="button-menus" data-section="menus" class="nav-button">Customize <em>menus</em> 自定义菜单</button>
+      <button type="button" id="button-shortcuts" data-section="shortcuts" class="nav-button">Register keyboard <em>shortcuts</em> 定义键盘快捷键</button>
     </div>
 
     <div class="nav-item u-category-native-ui">
       <h5 class="nav-category">
         <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-native-ui"></use></svg>
-        Native User Interface</h5>
-      <button type="button" id="button-ex-links-file-manager" data-section="ex-links-file-manager" class="nav-button">Open <em>external links</em> or system <em>file manager</em></button>
-      <button type="button" id="button-notifications" data-section="notifications" class="nav-button"> <em>Notifications</em> with and without custom image</button>
-      <button type="button" id="button-dialogs" data-section="dialogs" class="nav-button">Use system <em>dialogs</em></button>
-      <button type="button" id="button-tray" data-section="tray" class="nav-button">Put your app in the <em>tray</em></button>
-      <button type="button" id="button-drag" data-section="drag" class="nav-button"><em>Drag</em> and drop files</button>
+        Native User Interface 本地用户界面</h5>
+      <button type="button" id="button-ex-links-file-manager" data-section="ex-links-file-manager" class="nav-button">Open <em>external links</em> or system <em>file manager</em>
+       打开外部链接或系统文件管理器</button>
+      <button type="button" id="button-notifications" data-section="notifications" class="nav-button"> <em>Notifications</em> with and without custom image 有或没有自定义图像的通知</button>
+      <button type="button" id="button-dialogs" data-section="dialogs" class="nav-button">Use system <em>dialogs</em> 使用系统弹窗</button>
+      <button type="button" id="button-tray" data-section="tray" class="nav-button">Put your app in the <em>tray</em> 托盘显示app图标</button>
+      <button type="button" id="button-drag" data-section="drag" class="nav-button"><em>Drag</em> and drop files 拖放文件</button>
     </div>
 
     <div class="nav-item u-category-communication">
       <h5 class="nav-category">
         <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-communication"></use></svg>
-        Communication
+        Communication 通信
       </h5>
-      <button type="button" id="button-ipc" data-section="ipc" class="nav-button">Communicate between the <em>two processes</em></button>
+      <button type="button" id="button-ipc" data-section="ipc" class="nav-button">Communicate between the <em>two processes</em> 两个进程之间的通信</button>
     </div>
 
     <div class="nav-item u-category-system">
       <h5 class="nav-category">
         <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-system"></use></svg>
-        System
+        System 系统
       </h5>
-      <button type="button" id="button-app-sys-information" data-section="app-sys-information" class="nav-button" >Get app or user <em>system information</em></button>
-      <button type="button" id="button-clipboard" data-section="clipboard" class="nav-button">Copy and paste from the <em>clipboard</em></button>
-      <button type="button" id="button-protocol" data-section="protocol" class="nav-button">Launch app from <em>protocol handler</em></button>
+      <button type="button" id="button-app-sys-information" data-section="app-sys-information" class="nav-button" >Get app or user <em>system information</em> 获取app或者系统信息</button>
+      <button type="button" id="button-clipboard" data-section="clipboard" class="nav-button">Copy and paste from the <em>clipboard</em> 通过剪贴板进行复制或粘贴</button>
+      <button type="button" id="button-protocol" data-section="protocol" class="nav-button">Launch app from <em>protocol handler</em> 通过协议处理器启动app</button>
     </div>
 
     <div class="nav-item u-category-media">
       <h5 class="nav-category">
         <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-media"></use></svg>
-        Media
+        Media 媒体
       </h5>
-      <button type="button" id="button-desktop-capturer" data-section="desktop-capturer" class="nav-button">Take a <em>screenshot</em></button>
+      <button type="button" id="button-desktop-capturer" data-section="desktop-capturer" class="nav-button">Take a <em>screenshot</em> 获取一个截图</button>
     </div>
 
     <footer class="nav-footer">
-      <button type="button" id="button-about" data-modal="about" class="nav-footer-button">About</button>
+      <button type="button" id="button-about" data-modal="about" class="nav-footer-button">About 关于</button>
       <a class="nav-footer-logo" href="https://github.com" aria-label="Homepage">
         <svg class="nav-footer-icon"><use xlink:href="assets/img/icons.svg#icon-love"></use></svg>
       </a>

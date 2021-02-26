@@ -4,35 +4,42 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-windows"></use></svg>
-          Create and Manage Windows
+          Create and Manage Windows 创建和管理窗口
         </h1>
         <h3>The <code>BrowserWindow</code> module in Electron allows you to create a new browser window or manage an existing one.</h3>
+        <h3>在 Electron 里你可以通过<code>BrowserWindow</code> 模块创建一个新的窗口或者管理一个已经存在的窗口对象。</h3>
 
         <p>Each browser window is a separate process, known as the renderer process. This process, like the main process that controls the life cycle of the app, has full access to the Node.js APIs.
+        <p>每个窗口都是一个独立的进程，称之为渲染进程。这个进程，和控制整个 app 生命周期的主进程一样，拥有对 node.js APIs 的完整权限。
 
         <p>Open the <a href="http://electron.atom.io/docs/api/browser-window">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+        <p>在你的浏览器中打开一个新的窗口查看完整的API文档</p>
       </div>
     </header>
 
     <div class="demo">
       <div class="demo-wrapper">
         <button id="new-window-demo-toggle" class="js-container-target demo-toggle-button">Create a new window
-          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Main</div>
+          <div class="demo-meta u-avoid-clicks">Supports 支持: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Main</div>
         </button>
         <div class="demo-box">
           <div class="demo-controls">
             <button class="demo-button" id="new-window">View Demo</button>
           </div>
           <p>The <code>BrowserWindow</code> module gives you the ability to create new windows in your app. This main process module can be used from the renderer process with the <code>remote</code> module, as is shown in this demo.</p>
+          <p>如本例所示，<code>BrowserWindow</code> 模块为你提供了在 app 中创建一个窗口的能力。整个主进程将会被带有<code>remote</code>模块的渲染进程调用。</p>
 
           <p>There are a lot of options when creating a new window. A few are in this demo, but visit the <a href="http://electron.atom.io/docs/api/browser-window">documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> for the full list.</p>
+          <p>在创建窗口时有很多选项。示例中展示了一些，完整的列表请查看文档。</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/windows/create-window.js"></code></pre>
 
           <div class="demo-protip">
             <h2>ProTip</h2>
             <strong>Use an invisible browser window to run background tasks.</strong>
+            <strong>使用一个隐藏窗口运行后台任务。</strong>
             <p>You can set a new browser window to not be shown (be invisible) in order to use that additional renderer process as a kind of new thread in which to run JavaScript in the background of your app. You do this by setting the <code>show</code> property to <code>false</code> when defining the new window.</p>
+            <p>你可以开启一个不显示（隐藏）的窗口去运行额外的渲染进程，它就像一个新的进程在 app 后台运行 JavaScript。你可以在初始化窗口的时候通过 show 属性进行设定。</p>
             <pre>
 <code class="language-js">var win = new BrowserWindow({
   width: 400, height: 225, show: false
@@ -45,7 +52,7 @@
     <div class="demo">
       <div class="demo-wrapper">
         <button id="manage-window-demo-toggle" class="js-container-target demo-toggle-button">Manage window state
-          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Main</div>
+          <div class="demo-meta u-avoid-clicks">Supports 支持: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Main</div>
         </button>
         <div class="demo-box">
           <div class="demo-controls">
@@ -53,8 +60,10 @@
             <span class="demo-response" id="manage-window-reply"></span>
           </div>
            <p>In this demo we create a new window and listen for <code>move</code> and <code>resize</code> events on it. Click the demo button, change the new window and see the dimensions and position update here, above.</p>
-          <p>There are a lot of methods for controlling the state of the window such as the size, location, and focus status as well as events to listen to for window changes. Visit the <a href="http://electron.atom.io/docs/api/browser-window">documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> for the full list.</p>
-          <h5>Renderer Process</h5>
+          <p>在这个 demo 中我们将会创建一个新的窗口并监听它的移动和调整大小事件。点击 demo 按钮，调整新窗口，你会看到上面的大小和位置在更新。</p>
+           <p>There are a lot of methods for controlling the state of the window such as the size, location, and focus status as well as events to listen to for window changes. Visit the <a href="http://electron.atom.io/docs/api/browser-window">documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> for the full list.</p>
+          <p>有很多方法可以控制窗口的状态，比如：大小、位置、焦点状态以及监听窗口改变的事件。完整参数列表请查看文档。</p>
+           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/windows/manage-window.js"></code></pre>
         </div>
       </div>
@@ -63,7 +72,7 @@
     <div class="demo">
       <div class="demo-wrapper">
         <button id="using-window-events-demo-toggle" class="js-container-target demo-toggle-button">Window events: blur and focus
-          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Main</div>
+          <div class="demo-meta u-avoid-clicks">Supports 支持: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Main</div>
         </button>
         <div class="demo-box">
           <div class="demo-controls">
@@ -71,6 +80,7 @@
             <button  class="demo-button disappear" id="focus-on-modal-window">Focus on Demo</button>
           </div>
           <p>In this demo, we create a new window and listen for <code>blur</code> event on it. Click the demo button to create a new modal window, and switch focus back to the parent window by clicking on it. You can click the <i>Focus on Demo</i> button to switch focus to the modal window again.</p>
+          <p>在这个 demo，我们将创建一个新的窗口并监听它的 blur 事件。点击 demo 按钮创建一个新的模态窗口，然后点击父窗口将焦点切回父窗口上。你可以通过点击 Focus on Demo 按钮，重新将焦点切回模态窗口。</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/windows/using-window-events.js"></code></pre>
         </div>
@@ -91,11 +101,13 @@
             such as toolbars, title bars, status bars, borders, etc. You can make a browser window frameless by setting
             <code>frame</code> to <code>false</code> when creating the window.
           </p>
+          <p>无框架窗口是一个没有“chrome”样子的窗口，比如：工具栏、标题栏、状态栏、外边框等。在创建窗口的时候将 frame 属性设为 false，你就得到一个无框架窗口。 </p>
 
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/windows/frameless-window.js"></code></pre>
 
           <p>Windows can have a transparent background, too. By setting the <code>transparent</code> option to <code>true</code>, you can also make your frameless window transparent:</p>
+          <p>窗口页可以是透明的。通过设定 transparent 属性为 true，你就可以使你的无框架窗口变的透明。</p>
           <pre>
 <code class="language-js">var win = new BrowserWindow({
   transparent: true,
