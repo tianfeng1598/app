@@ -4,6 +4,19 @@ const newWindowBtn = document.getElementById('frameless-window')
 const path = require('path')
 
 newWindowBtn.addEventListener('click', (event) => {
+  console.log(event);
+  const modalPath = path.join('file://', __dirname, '../../sections/windows/modal.html')
+  let win = new BrowserWindow({
+    frame: false
+  })
+
+  win.on('close', () => { win = null })
+  win.loadURL(modalPath)
+  win.show()
+})
+
+transparentWindowBtn.addEventListener('click', (event) => {
+  console.log(event);
   const modalPath = path.join('file://', __dirname, '../../sections/windows/modal.html')
   let win = new BrowserWindow({
     transparent: true,
