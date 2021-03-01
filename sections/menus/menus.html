@@ -4,11 +4,13 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-menu"></use></svg>
-          Customize Menus
+          Customize Menus 自定义菜单
         </h1>
         <h3>The <code>Menu</code> and <code>MenuItem</code> modules can be used to create custom native menus.</h3>
 
+        <p><code>Menu</code> 和 <code>MenuItem</code>模块可以使用用户自己创建的菜单。</p>
         <p>There are two kinds of menus: the application (top) menu and context (right-click) menu.</p>
+        <p>菜单分为两种：应用程序顶端的菜单和内容区的右击菜单。</p>
 
         <p>Open the <a href="http://electron.atom.io/docs/api/menu">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
       </div>
@@ -21,16 +23,19 @@
         </button>
         <div class="demo-box">
           <p>The <code>Menu</code> and <code>MenuItem</code> modules allow you to customize your application menu. If you don't set any menu, Electron will generate a minimal menu for your app by default.</p>
-
+          <p><code>Menu</code> 和 <code>MenuItem</code> 模块允许你自定义自己的应用菜单。如果你不想设置任何菜单，Electron 将会默认为你的 app 生成一个最简单的菜单。</p>
           <p>This app uses the code below to set the application menu. If you click the 'View' option in the application menu and then the 'App Menu Demo', you'll see an information box displayed.</p>
+          <p>这个 app 使用如下代码设置应用菜单。如果你在应用菜单中点击‘View’选项，然后点击‘App Menu Demo’，你将看到一个提示信息的窗口显示。</p>
           <h5>Main Process</h5>
           <pre><code data-path="main-process/menus/application-menu.js"></code></pre>
 
           <div class="demo-protip">
             <h2>ProTip</h2>
-            <strong>Know operating system menu differences.</strong>
+            <strong>Know operating system menu differences. 知晓操作系统菜单的差异。</strong>
             <p>When designing an app for multiple operating systems it's important to be mindful of the ways application menu conventions differ on each operating system.</p>
+            <p>当设计一个应用于不同操作系统的 app 时留意每种操作系统应用菜单的不同规范时非常重要的。</p>
             <p>For instance, on Windows, accelerators are set with an <code>&</code>. Naming conventions also vary, like between "Settings" or "Preferences". Below are resources for learning operating system specific standards.</p>
+            <p>例如，在Windows,加速器通常被设定为‘&’。命名约定也有所不同，比如“设置”或“首选项”。下面是学习操作系统特定标准的资源。</p>
             <ul>
               <li><a href="https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/">macOS<span class="u-visible-to-screen-reader">(opens in new window)</span></a></li>
               <li><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb226797(v=vs.85).aspx">Windows<span class="u-visible-to-screen-reader">(opens in new window)</span></a></li>
@@ -51,8 +56,9 @@
             <button class="demo-button" id="context-menu">View Demo</button>
           </div>
           <p>A context, or right-click, menu can be created with the <code>Menu</code> and <code>MenuItem</code> modules as well. You can right-click anywhere in this app or click the demo button to see an example context menu.</p>
-
+          <p>上下文菜单或者右击菜单同样也可以通过<code>Menu</code>和<code>MenuItem</code>模块进行设置。你可以在应用内的任何地方右击或者点击demo按钮去查看实例上下文菜单。</p>
           <p>In this demo we use the <code>ipcRenderer</code> module to show the context menu when explicitly calling it from the renderer process.</p>
+          <p>在这个演示中，我们使用<code>ipcRenderer</code>模块来显示上下文菜单，当从渲染进程显式调用它时。</p>
           <p>See the full <a href="http://electron.atom.io/docs/api/web-contents/#event-context-menu">context-menu event documentation</a> for all the available properties.</p>
           <h5>Main Process</h5>
           <pre><code data-path="main-process/menus/context-menu.js"></code></pre>
