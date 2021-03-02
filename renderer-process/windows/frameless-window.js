@@ -1,5 +1,6 @@
 const { BrowserWindow } = require('electron').remote
 const newWindowBtn = document.getElementById('frameless-window')
+const transparentWindowBtn = document.getElementById('frameless-transparent-window')
 
 const path = require('path')
 

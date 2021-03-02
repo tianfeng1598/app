@@ -4,16 +4,20 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-menu"></use></svg>
-          Keyboard Shortcuts
+          Keyboard Shortcuts 键盘快捷键
         </h1>
 
         <h3>The <code>globalShortcut</code> and <code>Menu</code> modules can be used to define keyboard shortcuts.</h3>
+        <h3><code>globalShortcut</code> 和 <code>Menu</code> 模块可以用于定义键盘快捷键。</h3>
 
         <p>
           In Electron, keyboard shortcuts are called accelerators.
           They can be assigned to actions in your application's Menu,
           or they can be assigned globally so they'll be triggered even when
           your app doesn't have keyboard focus.
+        </p>
+        <p>
+          在 Electron，键盘快捷键也称为加速器（Accelerators）。他们被允许应用在你的应用菜单上，或者他们也被允许全局应用，所以即使你的 app 没有获得键盘焦点也可以触发。
         </p>
 
         <p>
@@ -24,6 +28,7 @@
           <a class="u-exlink" href="http://electron.atom.io/docs/api/global-shortcut">globalShortcut</a>
           APIs in your browser.
         </p>
+        <p>在浏览器中查看 Menu 、Accelerator 和 globalShortcut 的 API 文档。</p>
 
       </div>
     </header>
@@ -37,11 +42,17 @@
           <p>
             To try this demo, press <kbd class="normalize-to-platform">CommandOrControl+Alt+K</kbd> on your keyboard.
           </p>
+          <p>
+            尝试一下这个 demo，在你的键盘按下<kbd class="normalize-to-platform">CommandOrControl+Alt+K</kbd>。
+          </p>
 
           <p>
             Global shortcuts are detected even when the app doesn't have
             keyboard focus, and they must be registered after the app's
             `ready` event is emitted.
+          </p>
+          <p>
+            即使 app 没有获得键盘焦点也可以检测到全局键盘快捷键，他们必须在 app ‘ready’ 触发之后注册。
           </p>
 
           <h5>Main Process</h5>
@@ -49,12 +60,15 @@
 
           <div class="demo-protip">
             <h2>ProTip</h2>
-            <strong>Avoid overriding system-wide keyboard shortcuts.</strong>
+            <strong>Avoid overriding system-wide keyboard shortcuts. 避免覆盖系统范围的键盘快捷键。</strong>
             <p>
               When registering global shortcuts, it's important to be aware of
               existing defaults in the target operating system, so as not to
               override any existing behaviors. For an overview of each
               operating system's keyboard shortcuts, view these documents:
+            </p>
+            <p>
+              当注册全局快捷键的时候，意识到系统范围是否已经有默认值是很重要的，以免覆盖任何已经存在的行为。关于操作系统的键盘快捷键概述，可以查看这些文档：
             </p>
 
             <ul>

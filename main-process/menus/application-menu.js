@@ -1,7 +1,7 @@
 const {BrowserWindow, Menu, app, shell, dialog} = require('electron')
 
 let template = [{
-  label: 'Edit',
+  label: '&Edit',
   submenu: [{
     label: 'Undo',
     accelerator: 'CmdOrCtrl+Z',
@@ -30,7 +30,8 @@ let template = [{
     role: 'selectall'
   }]
 }, {
-  label: 'View',
+  // 通过 ‘&’ 符号，启用 accelerator,用 alt+V 开启菜单，不区分大小写
+  label: '&View',
   submenu: [{
     label: 'Reload',
     accelerator: 'CmdOrCtrl+R',
