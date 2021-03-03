@@ -1,11 +1,11 @@
 // 引入 Menu 模块
-const { Menu, MenuItem } = require('electron')
+const { Menu } = require('electron')
 
 // Menu 的静态方法
 
 // 设置菜单，方法接受 menu 对象，展示 menu 实例内容；传入 null，将会禁用默认菜单功能(win\linux)；如果不传值，展示默认菜单
 // macOS 中如果要禁用菜单应该传入一个空的 menu 实例
-Menu.setApplicationMenu(menu|null)
+Menu.setApplicationMenu(menu | null)
 // 获得菜单, 如果有菜单得到一个 menu 实例对象，如果没有菜单，则返回一个 null
 // 如果没有设置，走的默认呢？
 // 得到的 menu 实例对象是不支持动态增删内容的，但是可以动态修改它的实例属性
@@ -34,7 +34,7 @@ menu.append(MenuItem)
 menu.getMenuItemById(id)
 // 插入菜单
 // position 必填项，插入的位置,从0开始；MenuItem 菜单项；
-menu.insert(position,MenuItem)
+menu.insert(position, MenuItem)
 // 属性
 menu.items
 
@@ -55,5 +55,13 @@ app.on('menu-will-close', (event) => {
 // 菜单位置
 // 一般情况是，菜单的顺序都是自己定好的；但是如果需要通过某些条件来限定菜单的加载顺序，那就需要对菜单的位置选项进行了解
 // before, after, beforeGroupContaining, afterGroupContaining 和 id
-// 
+// 顺序执行，如果已经存在id属性，会按照id属性排序，如果id属性不存在，则按照原始位置顺序排序
 
+let template = [
+  { id: '1', label: 'one', after: ['1'] },
+  { type: 'separator' },
+  { id: '3', label: 'three', beforeGroupContaining: ['1'] },
+  { id: '4', label: 'four', afterGroupContaining: ['2'] },
+  { type: 'separator' },
+  { id: '2', label: 'two', before: ['3'] }
+];
