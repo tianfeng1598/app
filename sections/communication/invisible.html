@@ -6,7 +6,10 @@
     ipc.on('compute-factorial', function (event, number, fromWindowId) {
       const result = factorial(number)
       const fromWindow = BrowserWindow.fromId(fromWindowId)
+      // 只能通过 ipcMain 的方式去发送，无法通过 ipcRenderer 通信
       fromWindow.webContents.send('factorial-computed', number, result)
+      // 无法通过 ipcRenderer 通信
+      // ipc.send('factorial-computed', number, result);
       window.close()
     })
 

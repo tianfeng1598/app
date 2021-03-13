@@ -7,9 +7,12 @@
           Communication between processes
         </h1>
         <h3>The <code>ipc</code> (inter-process communication) module allows you to send and receive synchronous and asynchronous messages between the main and renderer processes.</h3>
+        <h3><code>ipc</code>模块就是进程间通信，它允许你发送和接收同步或者异步信息，在主进程和渲染进程之间。</h3>
 
         <p>There is a version of this module available for both processes: <code>ipcMain</code> and <code>ipcRenderer</code>.</p>
+        <p>这两个进程都有一个这个模块的版本可以用：ipcMain 和 ipcRenderer.</p>
         <p>Open the full API documentation for the <a href="http://electron.atom.io/docs/api/ipc-main">main process<span class="u-visible-to-screen-reader">(opens in new window)</span></a> and the <a href="http://electron.atom.io/docs/api/ipc-renderer/">renderer process<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+        <p>打开浏览器查看完整文档。</p>
       </div>
     </header>
 
@@ -24,8 +27,10 @@
             <span class="demo-response" id="async-reply"></span>
           </div>
           <p>Using <code>ipc</code> to send messages between processes asynchronously is the preferred method since it will return when finished without blocking other operations in the same process.</p>
+          <p>使用<code>ipc</code>异步发送消息在两个进程之间是首选方法，因为它在结束的时候，不会阻碍其他进程中的操作。</p>
 
           <p>This example sends a "ping" from this process (renderer) to the main process. The main process then replies with "pong".</p>
+          <p>这个示例发送一个“ping”从这个线程（渲染）去主线程。这个主线程将会回复“pong”。</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/communication/async-msg.js"></code></pre>
           <h5>Main Process</h5>
@@ -45,7 +50,9 @@
             <span class="demo-response" id="sync-reply"></span>
           </div>
           <p>You can use the <code>ipc</code> module to send synchronous messages between processes as well, but note that the synchronous nature of this method means that it <b>will block</b> other operations while completing its task.</p>
+          <p>你也可以使用这个<code>ipc</code>模块去发送一个同步信息在两个进程之间，但是记住在这个方法的同步期间，它将会阻止其他的操作完成任务。</p>
           <p>This example sends a synchronous message, "ping", from this process (renderer) to the main process. The main process then replies with "pong".</p>
+          <p>这个示例发送一个同步消息，“ping”,从这个进程（渲染）到主进程。这个主进程将会回复“pong”。</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/communication/sync-msg.js"></code></pre>
           <h5>Main Process</h5>
@@ -56,17 +63,20 @@
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="invis-msg-demo-toggle" class="js-container-target demo-toggle-button">Communicate with an invisible window
+        <button id="invis-msg-demo-toggle" class="js-container-target demo-toggle-button">Communicate with an invisible window 通过隐藏窗口通信
           <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
         </button>
         <div class="demo-box">
           <div class="demo-controls">
-            <button class="demo-button" id="invis-msg">Compute Factorial</button>
+            <button class="demo-button" id="invis-msg">Compute Factorial 计算阶乘</button>
             <span class="demo-response" id="invis-reply"></span>
           </div>
           <p>It is common practice to create a new invisible browser window (renderer process) in order to run tasks without impacting performance in the main app's window.</p>
+          <p>它一般会去实行创建一个隐藏窗口（渲染进程）去执行任务为了不影响主程序窗口的性能。</p>
           <p>In this example we use the <code>remote</code> module to create a new invisible browser window from this renderer process. When the new page is loaded we send a message with <code>ipc</code> that the new window is listening for.</p>
+          <p>在这个示例中，我们使用 <code>remote</code>模块去创建一个新的隐藏的窗口从渲染进程。当新的页面加载之后我们将会发送一个消息通过<code>ipc</code>，这个新窗口将会监听。</p>
           <p>The new window then computes the factorial and sends the result to be received by this, the original, window and added to the page above.</p>
+          <p>这个新窗口将会计算这个阶乘并且返回结果去回复它，最初的窗口将会添加到页面上。</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/communication/invisible-msg.js"></code></pre>
           <h5>Invisible Window Page HTML</h5>
