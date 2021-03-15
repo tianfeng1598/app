@@ -7,7 +7,9 @@
           Get app and system information
         </h1>
         <h3>With a few Node.js and Electron modules you can gather information about the user's system, app or screen.</h3>
+        <h3>通过一些 Node.js 和 Electron 模块，你可以搜集一些信息关于用户的系统，app和屏幕。</h3>
         <p>Links to the relevant documentation are in the demos below.</p>
+        <p>下面的demo中有相关的文档链接。</p>
       </div>
     </header>
 
@@ -22,8 +24,11 @@
             <span class="demo-response" id="got-app-info"></span>
           </div>
           <p>The main process <code>app</code> module can be used to get the path at which your app is located on the user's computer.</p>
+          <p>主进程中的 <code>app</code>模块可以被用来和获取你app在用户本地电脑上的安装路径。</p>
           <p>In this example, to get that information from the renderer process, we use the <code>ipc</code> module to send a message to the main process requesting the app's path.</p>
+          <p>在这个示例中，我们将会在渲染进程中获取信息，通过<code>ipc</code>模块发送信息到主进程请求app的路径。</p>
           <p>See the <a href="http://electron.atom.io/docs/api/app">app module documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> for more.</p>
+          <p>打开浏览器查看 app 模块的文档。</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/system/app-information.js"></code></pre>
           <h5>Main Process</h5>
@@ -43,15 +48,18 @@
             <span class="demo-response" id="got-version-info"></span>
           </div>
           <p>The <code>process</code> module is built into Node.js (therefore you can use this in both the main and renderer processes) and in Electron apps this object has a few more useful properties on it.</p>
+          <p><code>process</code>模块是在 Node.js 中构建的（因此你可以在主进程和渲染进程中使用它）并且在 Electron 中这个模块也是有许多有用的属性。</p>
           <p>The example below gets the version of Electron in use by the app.</p>
+          <p>下面的示例将会获取app中使用的 Electron 版本。</p>
           <p>See the <a href="http://electron.atom.io/docs/api/process">process documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> for more.</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/system/version-information.js"></code></pre>
 
           <div class="demo-protip">
             <h2>ProTip</h2>
-            <strong>Find versions of Chromium, Node.js and V8.</strong>
+            <strong>Find versions of Chromium, Node.js and V8. 查询 Chromium, Node.js 和 V8 的版本信息。</strong>
             <p>Electron also includes versions of Chromium, Node.js and V8 within the <code>process.versions</code> object. You can get there quickly by opening up developer tools in an Electron app and typing <code>process.versions</code>.</p>
+            <p>Electron 对象中还包含了Chromium, Node.js 和 V8 的版本信息。你可以通过在app中打开开发者工具并尝试用<code>process.version</code>快速获取。</p>
             <pre><code class="language-js">// Returns version of Chromium in use
 process.versions.chrome
 // Returns version of V8 in use
@@ -74,8 +82,9 @@ process.versions.node</code></pre>
             <span class="demo-response" id="got-sys-info"></span>
           </div>
           <p>The Node.js <code>os</code> module provides useful information about the user's operating system. It's built into Node.js and can be used in both the main and renderer proesses.</p>
+          <P>Node.js <code>os</code>模块提供了关于用户操作系统有用的信息。他是通过 Node.js 构建的所以它可以在主进程和渲染进程中使用。</P>
           <p>In the example below we require the module and then return the location of the home directory.</p>
-
+          <p>在下面这个示例中我们将会引入这个模块并且返回本地的 home 文件夹。</p>
           <p>See the full <a href="https://nodejs.org/api/os.html"> os documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> for more.</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/system/sys-information.js"></code></pre>
@@ -94,8 +103,10 @@ process.versions.node</code></pre>
             <span class="demo-response" id="got-screen-info"></span>
           </div>
           <p>The Electron <code>screen</code> module retrieves information about screen size, displays, cursor position, etc. In the example below we retrieve the dimensions of the monitor in use.</p>
+          <p>Electron 的 <code>screen</code>模块可以检索得到关于屏幕大小，显示，光标位置等信息。在下面的示例中，我们检索正在使用的监视器尺寸。</p>
 
           <p>See the full <a href="http://electron.atom.io/docs/api/screen">screen documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> for more.</p>
+          <p>查看 screen 完整文档。</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/system/screen-information.js"></code></pre>
 
@@ -103,8 +114,10 @@ process.versions.node</code></pre>
             <h2>ProTip</h2>
             <strong>Differences in dimensions.</strong>
             <p>The <code>.size</code> method in the example returns the raw dimensions of the screen but because of system menu bars this may not be the actual space available for your app.</p>
+            <p>在这个示例中<code>.size</code>方法返回的原始尺寸，因为有系统菜单的存在这个可能不是你 app 的实际可用范围。</p>
 
             <p>To get the dimensions of the available screen space use the <code>.workAreaSize</code> method. Using <code>.workArea</code> will return the coordinates as well as the dimensions of the available screen space.</p>
+            <p>如果想要屏幕空间的可用尺寸可以用<code>.workAreaSize</code>方法。使用<code>.workArea</code>将会返回坐标以及可用的屏幕空间尺寸。</p>
           </div>
         </div>
       </div>
