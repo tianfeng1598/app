@@ -7,9 +7,12 @@
           Protocol Handler
         </h1>
         <h3>The <code>app</code> module provides methods for handling protocols.</h3>
+        <h3><code>app</code>模块提供了关于处理协议的方法。</h3>
         <p>These methods allow you to set and unset the protocols your app should be the default app for. Similar to when a browser asks to be your default for viewing web pages.</p>
+        <p>这些方法允许你去设置或者取消将你的app设置为默认app。类似当浏览器请求时你的默认展示web页面。</p>
 
         <p>Open the <a href="http://electron.atom.io/docs/api/app">full app API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+        <p>打开浏览器查看完整API文档。</p>
       </div>
     </header>
 
@@ -23,8 +26,10 @@
             <button class="demo-button" id="protocol-handler">View Demo</button>
           </div>
           <p>You can set your app as the default app to open for a specific protocol. For instance, in this demo we set this app as the default for <code>electron-api-demos://</code>. The demo button above will launch a page in your default browser with a link. Click that link and it will re-launch this app.</p>
+          <p>你可以设置你的app作为一个特定协议默认的app。例如，在这个demo我们设置这个app作为<code>electron-api-demos://</code>默认的应用。这个demo按钮作为一个链接将会触发一个页面在你的默认的浏览器上。点击这个链接并且它将重新触发这个app。</p>
           <h5>Packaging</h5>
           <p>This feature will only work on macOS when your app is packaged. It will not work when you're launching it in development from the command-line. When you package your app you'll need to make sure the macOS <code>plist</code> for the app is updated to include the new protocol handler. If you're using <code>electron-packager</code> then you can add the flag <code>--extend-info</code> with a path to the <code>plist</code> you've created. The one for this app is below.</p>
+          <p>如果你的app是packaged这个特性将会仅仅在macOS上使用。如果你通过命令行在开发模式下触发它，他将不会工作。当你打包你的app时，你需要确认 app 的 macOS <code>plist</code>已经更新到新的控制协议。如果你在使用 <code>electron-packager</code> 你需要添加一个标志 <code>--extend-info</code> 作为你创建 <code>plist</code> 的路径。下面这个就是对这个app的一个演示。</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/system/protocol-handler.js"></code></pre>
           <h5>Main Process</h5>

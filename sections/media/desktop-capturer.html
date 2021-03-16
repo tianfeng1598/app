@@ -4,9 +4,10 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-media"></use></svg>
-          Take a screenshot
+          Take a screenshot 获得一个屏幕截图
         </h1>
         <h3>The <code>desktopCapturer</code> module in Electron can be used to access any media, such as audio, video, screen and window, that is available through the <code>getUserMedia</code> web API in Chromium.</h3>
+        <h3>在Electron中<code>desktopCapturer(桌面捕获者)</code>模块可以被用来操作任何应用，例如音乐播放器、影视播放器，屏幕和窗口，这些可以在chromium 中通过 <code>getUserMedia</code>web API获得。</h3>
 
         <p>Open the <a href="http://electron.atom.io/docs/api/desktop-capturer">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
       </div>
@@ -23,7 +24,9 @@
             <span class="demo-response is-selectable" id="screenshot-path"></span>
           </div>
           <p>This demo uses the <code>desktopCapturer</code> module to gather screens in use and select the entire screen and take a snapshot of what is visible.</p>
+          <p>这个demo使用 <code>desktopCapturer</code> 模块去搜集正在使用屏幕和选择全屏并创建一个快照。</p>
           <p>Clicking the demo button will take a screenshot of your current screen and open it in your default viewer.</p>
+          <p>点击这个demo按钮将会创建一个快照关于你当前屏幕并且通过你默认的查看器打开它。</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/media/desktop-capturer.js"></code></pre>
         </div>
