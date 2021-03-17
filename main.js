@@ -52,7 +52,7 @@ function initialize () {
       // 开启 开发者工具
       mainWindow.webContents.openDevTools()
       // 最大化窗口
-      mainWindow.maximize()
+      // mainWindow.maximize()
       require('devtron').install()
     }
 

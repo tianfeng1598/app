@@ -4,11 +4,13 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-native-ui"></use></svg>
-          Drag and drop files
+          Drag and drop files 拖放文件
         </h1>
         <h3>Electron supports dragging files and content out from web content into the operating system's world.</h3>
+        <h3>Electron 支持将文件和内容从web拖到操作系统中</h3>
 
         <p>Open the <a href="https://electronjs.org/docs/tutorial/native-file-drag-drop">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+        <p>打开浏览器查看完整API文档。</p>
       </div>
     </header>
 
@@ -22,8 +24,10 @@
             <a href="#" id="drag-file-link">Drag Demo</a>
           </div>
           <p>Click and drag the link above to copy the renderer process javascript file on to your machine.</p>
+          <p>在链接上点击并且拖动，复制渲染进程的JavaScript文件到你自己的机器中。</p>
 
           <p>In this demo, the <code>webContents.startDrag()</code> API is called in response to the <code>ondragstart</code> event.</p>
+          <p>在这个示例中，<code>webContents.startDrag()</code>接口通过<code>ondragstart</code>事件响应。</p>
           <h5>Renderer Process</h5>
           <pre><code data-path="renderer-process/native-ui/drag/drag.js"></code></pre>
           <h5>Main Process</h5>
@@ -32,10 +36,31 @@
       </div>
     </div>
 
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="dragging-demo-toggle" class="js-container-target demo-toggle-button">drop files
+          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
+        </button>
+        <div class="demo-box">
+          <div class="demo-controls" id="file-path" >
+            <button class="demo-button" id="save-dialog">拖动文件到此</button>
+            <span class="demo-response" id="path"></span>
+            <span class="demo-response" style="width: 300px;height: 300px;background-color: pink;"></span>
+          </div>
+          <p>将文件拖动到app内，并获得文件的路径信息。</p>
+          <h5>Renderer Process</h5>
+          <pre><code data-path="renderer-process/native-ui/drag/dragInto.js"></code></pre>
+          <h5>Main Process</h5>
+          <pre><code data-path="main-process/native-ui/drag/dragInto.js"></code></pre>
+        </div>
+      </div>
+    </div>
+
 
 
     <script type="text/javascript">
       require('./renderer-process/native-ui/drag/drag')
+      require('./renderer-process/native-ui/drag/dragInto')
     </script>
 
   </section>
